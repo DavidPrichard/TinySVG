@@ -1,14 +1,10 @@
 # TinySVG
 A set of hand-optimized SVG icons.
 
-Even the most bloated SVG icon is pretty small, but sometimes you want it to be even smaller.
+There are a lot of free SVG icon sets out there, and some of them look pretty good. But even though nearly every icon is composed of simple geometric shapes, every set I've found defines their shape with bezier curves, making them much larger than necessary.
 
-SVGs that have come out of Inkscape or Illustrator have a lot of editor-specific markup, redundant groups and other unused
-fluff that can be largely eliminated with the smart use of a tool like SVGOMG, which I highly recommend.
+I suspect the issue is that the designers are using the automatic optimization features of Illustrator or Inkscape, which work by attmepting to approximate shapes as closely as possible using as few bezier curves as possible. For simple shapes that can be drawn with straight lines and circles, this doesn't make much sense.
 
-What is often overlooked, however, is that when Inkscape and Illustrator 'optimize' an SVG, they are actually attempting to
-approximate its shape with as few bezier curves as possible- and they do a great job! For hand-drawn and complex shapes it is impressive stuff. But for the basic shapes most icons are composed of, it doesn't make much sense.
-
-So, in the spirit of unnecessary, life-affirming optimization, I've spent a little time making generic SVG icons- like the three-bar menu icon- using hand-written SVG commands. It's a little hassle for a little bit of gain.
+This may not matter much given the small size of even bloated SVGs, but for now animating them properly nearly requires that they be included inline in the HTML, which means they aren't cached by browsers, so the difference may add up to something. The small size also makes them much less disruptive when reading through an HTML document, and if you want to create complex animations for your icon, it is easier to do so when you can independently address each shape it is composed of.
 
 As a bonus, each SVG in the set has it's color or stroke-color set to "currentColor", so that they will act like a font and take on whatever color they are assigned or inherit through CSS.
