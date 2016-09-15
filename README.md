@@ -1,6 +1,11 @@
 # TinySVG
 A set of hand-optimized SVG icons.
 
+## Use
+
+It's pretty simple. `icon-set.svg` contains all the icons declared as symbols; in most cases you'd want to include this inline with your HTML. Symbols support 'title' and 'desc' attributes if you need them for accessibility.
+
+The rest of the icons are included as individual .svg files for convenience, if you have some other use in mind.
 
 ## Rationale
 
@@ -12,8 +17,12 @@ This may not matter much given the small size of even bloated SVGs, but for now 
 
 As a bonus, each SVG in the set has it's color or stroke-color set to "currentColor", so they will take on whatever color they are assigned or inherit through CSS, just like a font.
 
-## Use
+### Contributing
 
-It's pretty simple. `icon-set.svg` contains all the icons declared as symbols; in most cases you'd want to include this inline with your HTML. Symbols support 'title' and 'desc' attributes if you need them for accessibility.
+Open an issue if you'd like to see a particular symbol; keep in mind that TinySVG is for symbols that can be mostly, or entirely, drawn without bezier curves (i.e. with straight lines and circles)
 
-The rest of the icons are included as individual .svg files for convenience, if you have some other use in mind.
+If you'd like to contribute a symbol, please submit a pull request!
+
+### Credit
+
+* Many thanks to [SVGO](https://github.com/svg/svgo) and Jake Archibald's [SVGOMG](https://jakearchibald.github.io/svgomg/), which make it possible to reduce bloated, illegible SVGs down to smaller sizes that a human can then edit by hand.
